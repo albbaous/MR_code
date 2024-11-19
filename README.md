@@ -1,11 +1,11 @@
 # MR_code
 Just trynna figure out an MR pipeline for selecting instrumental variables from GWAS catalog
-
+- So I am doing 2-sample MR with Biobank data and GWAS Catalog to avoid overfitting - if i tried 3 sample, datasets would be TOO different
 ---
 
 #### **Step 1: Define the Research Question**
-- Identify the exposure (\( X \)) and outcome (\( Y \)) of interest.
-- Ensure the relationship between \( X \) and \( Y \) is biologically plausible.
+- Identify the exposure  X and outcome Y of interest.
+- X can be environmental or genetic - Y is definitely dementia 
 
 ---
 

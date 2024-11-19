@@ -1,5 +1,6 @@
 # MR_code
 Just trynna figure out an MR pipeline for selecting instrumental variables from GWAS catalog
+- good paper for this https://pmc.ncbi.nlm.nih.gov/articles/PMC6424604/#F2
 - So I am doing 2-sample MR with Biobank data and GWAS Catalog to avoid overfitting - if i tried 3 sample, datasets would be TOO different
 ---
 

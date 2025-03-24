@@ -1,19 +1,13 @@
 # MR_code
-Just trynna figure out an MR pipeline for selecting instrumental variables from GWAS catalog
-- good paper for this https://pmc.ncbi.nlm.nih.gov/articles/PMC6424604/#F2
-- So I am doing 2-sample MR with Biobank data and GWAS Catalog to avoid overfitting - if i tried 3 sample, datasets would be TOO different
----
+This is me trying to figure out how to use GWAS info. 
+I am using the following files: `DIAGRAMv3.2012DEC17.txt` (exposure) and `meta_analysis_ukbb_summary_stats_finngen_R12_F5_ALZHDEMENT_meta_out.tsv` (outcome) 
 
-#### **Step 1: Define the Research Question**
-- Identify the exposure  X and outcome Y of interest.
-- X can be environmental or genetic - Y is definitely dementia 
+#### **Step 1: Find the most significant snps
+this is done using the script `test1.R`
 
----
-
-#### **Step 2: Select Genetic Instruments**
-1. **Identify Variants**:
-   - Use GWAS summary statistics to find variants strongly associated with \( X \) (e.g., \( p < 5 \times 10^{-8} \)).
-   - Check the strength of instruments using the F-statistic (\( F > 10 \)).
+#### **Step 2: Clumping 
+this is correctly done using test2.R 
+- if running after a while you get the error `could not find ld_clump` 
    
 
 

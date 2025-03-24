@@ -1,15 +1,16 @@
-library(remotes)
+# THIS ONLY WORKS WELL BECAUSE ALL INSTALLATION STEPS ARE AT THE START, SEPARATED FROM THE REST 
 install.packages("remotes")
 install.packages("devtools")
-library(devtools)
-library(remotes)
+install.packages("data.table")
 options(timeout = 300)  # Increase timeout to 5 minutes
 devtools::install_github("explodecomputer/genetics.binaRies")
 genetics.binaRies::get_plink_binary()
 remotes::install_github("MRCIEU/TwoSampleMR")
 install.packages("dplyr")  # For tibble and data manipulation
+library(devtools)
+library(remotes)
 library(ieugwasr)
-install.packages("data.table")
+library(remotes)
 library(data.table)
 setwd("/Users/user/Desktop/Biostatistics1/testing_MR")
 getwd()
@@ -81,3 +82,4 @@ clumped_snps <- ld_clump(
 
 # Check the results of LD clumping
 head(clumped_snps)
+

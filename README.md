@@ -7,11 +7,7 @@ this is done using the script `test1.R`
 
 #### **Step 2: Clumping 
 this is correctly done using test2.R 
-- if running after a while you get the error `could not find ld_clump` just run all the libraries ever - refer to the one big document which is `all.R`
--
-   
-
-
+- if running after a while you get the error `could not find ld_clump` just run all the libraries ever - refer to the one big document which is `all.R` which has all the significant snps and the clumping 
 
 
 

@@ -2,6 +2,7 @@
 
 This is my process for working with GWAS summary statistics and Mendelian Randomization (MR).  
 The script `all.R` contains all the necessary code.  
+Make sure you run each step individually as you dont want to overwrite any of the files you edited outside 
 
 ### **Files Used**
 - **Exposure**: `DIAGRAMv3.2012DEC17.txt`
@@ -33,22 +34,29 @@ The script `all.R` contains all the necessary code.
 - Created `clumped_snps.csv`, keeping only:
   - `rsid`, `pval`, and `id` which is in the R code
 
-## Step 4 - Extracting SNPs from Finngenn to make outcome (dementia)
+## Step 4 - Extracting SNPs from Finngenn (UKB) to make outcome (dementia)
 📌 **Lines 80-89 in `all.R`**  
 - Created a `.txt` file with just the name of the snps SNPs: `alex_snps.txt`  
-- Use this to extract snp list for outcome from from Finngen, producing `final_outcome_Alex.csv`
+- Use this to extract snp list for outcome from UKB, producing `final_outcome_Alex.csv`
 - This produces `final_outcome_Alex.csv`
 
-## Step 5 - The Outcome edited 
-- Edited the `final_outcome.csv` to include only these: `SNP`	`p-val`	`effect`	`SE`	`a1`	`a2`	`a1_freq` (the eaf)	`Units`	`Gene`	`n` (this was just found on google/given to me)
-- Only use the Finngen sections - can do UKB later
-- the R code just renames the columns in the necessary way 
-
-## Step 6 - The Exposure edited 
+## Step 5 - The Exposure edited 
+📌 **Lines 91-107 in `all.R`** 
 - here we make a new sheet to include only these: `SNP`	`p-val`	`effect`	`SE`	`a1`	`a2`	`a1_freq` (the eaf)	`Units` (empty)	`Gene` (empty)	`n` (this was known - its the 69k that is stated on the paper as well)
 - creates `outcome_data.csv`
 - you just add another sheet next to final outcome with different bits to fill and use the different functions in excel
+- the R code just renames the columns in the necessary way
+  
+## Step 6 - The Outcome edited 
+📌 **Lines 108-124 in `all.R`** 
+- Edited the `final_outcome.csv` to include only these: `SNP`	`p-val`	`effect`	`SE`	`a1`	`a2`	`a1_freq` (the eaf)	`Units`	`Gene`	`n` (this was just found on google/given to me)
+- Only use the UKB sections - can do Finngen later
 - the R code just renames the columns in the necessary way 
+
+## Harmonising 
+📌 **Lines 126-130 in `all.R`** 
+- This is just running the MR package to make something to use in the actual MR
+- Then run various MR on the `UKB_harmonise.csv` - name is wrong cos
 
 ## EDITING IN BETWEEN: We do a lot of editing of the CSVs outside of R in excel and to do this: 
 - i can't remember exactly where we edited stuff, i.e., the below was for the `eaf` which was given to me
